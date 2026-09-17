@@ -266,13 +266,19 @@
 <div id="modalRoot"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="config.js"></script>
 <script>
 // ============================================================
-// Uses the shared _supabase client from config.js (same client
-// your other pages already use — no separate key/config here).
+// Fully independent from wanagebya.com's marketplace project —
+// its own Supabase project, its own auth, its own client.
+// Replace these two values with the NEW project's URL + anon key
+// (Settings > API in the new project's dashboard). The anon key is
+// safe to expose client-side; never put a service_role key here.
 // ============================================================
-const STORAGE_BUCKET = "product-images"; // <-- confirm this matches your existing bucket name
+const SUPABASE_URL = "https://YOUR-NEW-PROJECT-REF.supabase.co";
+const SUPABASE_ANON_KEY = "YOUR-NEW-PROJECT-ANON-KEY";
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const STORAGE_BUCKET = "dating-photos"; // created by the schema script in this new project
 
 let currentUser = null;
 let currentLang = "en";
