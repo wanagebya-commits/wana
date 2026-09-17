@@ -1,6 +1,6 @@
 // Ensure you have ' ' around the URL and Key!
 const supabaseUrl = 'https://ignacbozajgjjtjcnnjp.supabase.co/rest/v1/';
-const supabaseKey = 'sb_publishable__XhkM93G4uNhdKhDKa6osQ_PPpIPO6m';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlnbmFjYm96YWpnamp0amNubmpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2MTgzMDgsImV4cCI6MjEwNTE5NDMwOH0.rDp3y9T32U3FWf16l6DeCqx0dqlk2oZy5wku6M-A8UQ';
 
 // Initialize with a fallback for storage
 const _supabase = supabase.createClient(supabaseUrl, supabaseKey, {
